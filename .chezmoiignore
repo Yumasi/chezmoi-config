@@ -1,3 +1,11 @@
 {{ if ne .chezmoi.os "darwin" }}
 Brewfile
+{{ else }}
+
+{{ if ne .chezmoi.username "guillaume.pagnoux" }}
+Brewfile.pro
+{{ else }}
+Brewfile.perso
+{{ end }}
+
 {{ end }}
