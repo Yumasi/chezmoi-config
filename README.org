@@ -1,0 +1,17 @@
+#+title: Home config
+
+This repository olds the configuration for my machines, using =chezmoi= for easy
+deployment, templating, scripting, and encryption.
+
+* Installation
+
+To deploy the config to a new machine:
+#+begin_src sh
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply Yumasi
+#+end_src
+
+To deploy it as a one-shot:
+
+#+begin_src sh
+sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --one-shot Yumasi
+#+end_src

@@ -1,3 +1,5 @@
+README.org
+
 {{ if ne .chezmoi.os "darwin" }}
 Brewfile
 {{ else }}
