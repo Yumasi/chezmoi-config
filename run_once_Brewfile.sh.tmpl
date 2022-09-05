@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+{{ if eq .chezmoi.os "darwin" }}
+{{ if ne .chezmoi.username "guillaume.pagnoux" }}
+# Brewfile hash: {{ include "Brewfile.perso" | sha256sum }}
+{{ else }}
+# Brewfile hash: {{ include "encrypted_Brewfile.pro.asc" | sha256sum }}
+{{ end }}
+brew bundle install -f
+{{ end }}
